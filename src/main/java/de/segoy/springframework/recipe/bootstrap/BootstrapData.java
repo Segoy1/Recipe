@@ -27,7 +27,7 @@ public class BootstrapData implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Recipe guacamole = new Recipe();
 
-        guacamole.setDescription("The best guacamole keeps it simple: just ripe avocados and a handful of flavorful mix-ins.");
+        guacamole.setDescription("Guacat");
         guacamole.setPrepTime(10);
         guacamole.setCookTime(0);
         guacamole.setServings(4);

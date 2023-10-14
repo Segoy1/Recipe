@@ -10,28 +10,14 @@
 <table id="recipes" class="table table-striped">
     <thead>
     <tr>
+        <th style="width: 150px;">ID</th>
         <th style="width: 150px;">Description</th>
-        <th style="width: 150px;">Notes</th>
-        <th style="width: 150px;">Ingredients</th>
-        <th style="width: 150px;">Difficulty</th>
-        <th style="width: 150px;">Prep Time</th>
-        <th style="width: 150px;">Servings</th>
-        <th style="width: 150px;">Source</th>
-        <th style="width: 150px;">URL</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="recipe : ${recipes}">
+        <td th:text="${recipe.id}">1</td>
         <td th:text="${recipe.description}">1</td>
-        <td th:text="${recipe.notes.recipeNotes}">1</td>
-<!--        <tr th:each="ingredient : ${recipe.ingredients}">-->
-<!--            <td th:text="${ingredient.description}">Ingredient</td>-->
-<!--        </tr>-->
-        <td th:text="${recipe.difficulty}">1</td>
-        <td th:text="${recipe.prepTime}">1</td>
-        <td th:text="${recipe.servings}">1</td>
-        <td th:text="${recipe.source}">1</td>
-        <td th:text="${recipe.url}">1</td>
     </tr>
     </tbody>
 </table>
