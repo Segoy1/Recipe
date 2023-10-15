@@ -20,7 +20,9 @@ public class Recipe {
     private Integer servings;
     private String source;
     private String url;
-    private String direction;
+
+    @Lob
+    private String directions;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
     private Set<Ingredient> ingredients = new HashSet<>();
