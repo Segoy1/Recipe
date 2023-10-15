@@ -6,12 +6,14 @@ import de.segoy.springframework.recipe.repositories.CategoryRepository;
 import de.segoy.springframework.recipe.repositories.RecipeRepository;
 import de.segoy.springframework.recipe.repositories.UnitOfMeasureRepository;
 import de.segoy.springframework.recipe.services.RecipeService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Optional;
 
+@Slf4j
 @Controller
 public class IndexController {
 
@@ -30,7 +32,7 @@ public class IndexController {
 
         model.addAttribute("recipes", recipeService.getRecipesFromDb());
 
-        System.out.println("1..2...3....4.....5");
+        log.debug("getting index Page");
         return "index";
     }
 }

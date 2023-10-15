@@ -4,12 +4,13 @@ import de.segoy.springframework.recipe.domain.*;
 import de.segoy.springframework.recipe.repositories.CategoryRepository;
 import de.segoy.springframework.recipe.repositories.RecipeRepository;
 import de.segoy.springframework.recipe.repositories.UnitOfMeasureRepository;
-import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
+@Slf4j
 @Component
 public class BootstrapData implements CommandLineRunner {
 
@@ -105,6 +106,7 @@ public class BootstrapData implements CommandLineRunner {
 //        guacamole.getIngredients().add(tomato);
 //        guacamole.getIngredients().add(radish);
 
+        log.debug("Still no idead why i can't add ingredients that share a unit of measure");
         Notes notes = new Notes();
         notes.setRecipeNotes("Be careful handling chilis! If using, it's best to wear food-safe gloves. If no gloves are available, wash your hands thoroughly after handling, and do not touch your eyes or the area near your eyes for several hours afterwards.");
         notes.setRecipe(guacamole);
