@@ -5,6 +5,7 @@ import lombok.*;
 
 
 @Data
+@EqualsAndHashCode(exclude = "recipe")
 @Entity
 public class Notes {
 
