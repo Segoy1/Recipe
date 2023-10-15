@@ -7,6 +7,7 @@ import de.segoy.springframework.recipe.repositories.UnitOfMeasureRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 
@@ -25,10 +26,11 @@ public class BootstrapData implements CommandLineRunner {
     }
 
     @Override
+    @Transactional
     public void run(String... args) throws Exception {
         Recipe guacamole = new Recipe();
 
-        guacamole.setDescription("Guacat");
+        guacamole.setDescription("Best Guacamole");
         guacamole.setPrepTime(10);
         guacamole.setCookTime(0);
         guacamole.setServings(4);
